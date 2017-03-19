@@ -8,5 +8,7 @@ if (CurrentDay !== 6 && CurrentDay !== 0 && Open) {
     $('.openstatus').toggle();
 }
 
-$('.single-item').slick();
+
+
+
 
