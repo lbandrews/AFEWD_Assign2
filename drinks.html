@@ -10,6 +10,9 @@
     <meta name="author" content="Lewis Andrews">
     <meta name="keywords" content="Bar Maroc, Huddersfield, Bar Maroc Huddersfield, Cocktails, Huddersfield Cocktails, Pizza, Pizza in HUddersfield, Vegan, Vegan Pizza, Vegetarian and Vegan, Vegetarian and Vegan Pizza"> 
     <title> Bar Maroc© Huddersfield.</title>
+
+
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,6 +21,9 @@
     
     <!-- Font-awesome ICONS CSS -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
 
     
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -40,12 +46,7 @@
 
 <!-- Aladin Font for Navbar Brand -->
 <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
-<script src="js/maroc.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
 </head>
 
@@ -126,27 +127,23 @@
         <hr class="smallhr">
         </div>
         <div class="row">
-   		  <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-           <h5><strong>Prosecco</strong></h5>
-            <p class="text-muted"> A sparkling wine that doesn’t take itself too seriously, Prosecco is Italy's answer to refreshing, well-made sparkling wine at a reasonable price.</p>
-            <p class="text-muted"> Glass- £3<br>Raspberry Prosecco (Glass)- £5<br>Bottle- £14</p>
-            
+   		  <h4 > Click any of the buttons below to have our selection of drinks in that area pop up</h4>
+          <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
+           <a class="btn btn-lg btn-default btn-primary border" 
+           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textProsecco.html" href="javascript:;" >Prosecco</a>
             <hr>
             </div>
              <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-            <h5><strong>Mojitos</strong></h5>
-            <p class="text-muted">A timeless classic; mountains of fresh mint are muddled to perfection with sugar and lime juice. At Maroc, we pride ourselves on our Mojitos, a perfect mix of sweet and sour to form a really tasty cocktail, we have a few speciality variations to boot as well!</p>
-            <p class="text-muted">Original(Lime) - £4.00<br>Lemon - £4.50<br>Spiced Orange- £5.00</p>
+           <a class="btn btn-lg btn-default btn-primary border" 
+           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textMojitos.html" href="javascript:;" >Mojitos</a>
             <hr>
             </div>
-          <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-            <h5><strong>Sours</strong></h5>
-            <p class="text-muted">One of the world's first cocktails, formulated in 1862 by Jerry Thomas in his book "How to mix drinks", the sour is a classic that has stood the test of time, and is still able to adapt and be enjoyed over a dozen of centuries later. </p>
-            <p class="text-muted">Whiskey Sour - £3.50<br>Amaretto sour- £3.50<br>Godfather Sour (Whiskey and Amaretto) £4.00<br>Midori Sour (Melon)- £4.00</p>
+             <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
+           <a class="btn btn-lg btn-default btn-primary border" 
+           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textSours.html" href="javascript:;" >Sours</a>
             <hr>
             </div>
-        </div>
-        <!-- /.row -->
+        </div> <!-- row-->
 	
         </div>
 </section>
@@ -270,13 +267,17 @@
             <!-- /.row -->
         </footer>
 
-    <!-- jQuery -->
+     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
    
-   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+   <script src="js/maroc.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
    
 </body>
 
