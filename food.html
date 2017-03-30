@@ -46,7 +46,11 @@
 
 <!-- Aladin Font for Navbar Brand -->
 <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
-
+<style>
+ #map {
+        height: 100%;
+      }
+</style>
 
 </head>
 
@@ -128,22 +132,24 @@
         <div class="row">
    		  <h4 > Click any of the buttons below to have that section of the menu pop up</h4>
           <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-           <a class="btn btn-lg btn-default btn-primary border" 
-           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textStarters.html" href="javascript:;" >Starters &amp; Appetisers</a>
+           <button id="btn" class="btn btn-lg btn-default btn-primary border">Starters &amp; Appetisers</button>
+           
             <hr>
             </div>
              <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-           <a class="btn btn-lg btn-default btn-primary border" 
-           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textPizza.html" href="javascript:;" >Pizza &amp; Toppings</a>
+           <button id="btn1" class="btn btn-lg btn-default btn-primary border">Pizza</button>
             <hr>
             </div>
              <div class="col-lg-offset-0 col-lg-4 col-md-4 col-xs-10 col-xs-offset-1 col-md-offset-0 col-sm-offset-0 col-sm-4">
-           <a class="btn btn-lg btn-default btn-primary border" 
-           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textDesserts.html" href="javascript:;" >Desserts</a>
+           <button id="btn2" class="btn btn-lg btn-default btn-primary border" >Desserts</button>
+<!--           <button class="btn btn-lg btn-default btn-primary border" 
+           data-fancybox data-type="ajax" data-src="https://selene.hud.ac.uk/u1355938/afw2/ajax/ajax_textDesserts.html" href="javascript:;" >Desserts</button>-->
             <hr>
             </div>
+            <a class="aladin text-primary" style="font-size:18px" id="btn3">Clear menus</a>
         </div>
         <!-- /.row -->
+        <div id="menuitems" class="col-lg-offset-1 col-lg-10 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"></div>
 	
         </div>
 </section>        
@@ -162,11 +168,17 @@
 	</div>
 </section>
 
-<section id="homemap" class="map">
-<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2365.230595107726!2d-1.7866126837986334!3d53.64286038004227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bdc73fbf1f277%3A0xba20be0760f0a06!2sBar+Maroc!5e0!3m2!1sen!2sus!4v1479569129416"   ></iframe>
-<small>
-<a href="https://www.google.com/maps/place/Bar+Maroc/@53.6428604,-1.7866127,17z/data=!3m1!4b1!4m5!3m4!1s0x487bdc73fbf1f277:0xba20be0760f0a06!8m2!3d53.6428604!4d-1.784424?hl=en-US"></a>
-</small>
+<section id="mapdiv" class="map">
+<div id="map">
+</div>
+<br>
+<div id="journey" class="col-lg-10 col-lg-offset-1 text-center" style="font-size:16px" style="font-style:italic" style="font-weight:bold">
+<b>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+</b>
+<hr>
+</div>
+
 </section>
 
        <!-- Footer -->
@@ -197,7 +209,7 @@
                  <h4 class="aladin text-primary text-muted">Are we open right now? <div class="hours openstatus"><span class="blink"></span><span class="text-primary">Open</span></div>
 				 <div class="closed openstatus"><span class="blink-closed"></span><span class="text-secondary">Closed</span></div></h4>
                  
-                 <p class="text-muted">Monday-Sunday</p>
+                 <p class="text-muted">Monday-Saturday</p>
                  <h4 class="aladin text-secondary">16:30-Midnight</h4>
                 
                  <p class="text-muted"> Copyright &copy; Bar Maroc 2016</p>   
@@ -206,17 +218,28 @@
             </div>
             <!-- /.row -->
         </footer>
-    <!-- jQuery -->
+ <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.fancybox.js"></script>
-   
-   <script src="js/maroc.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <!-- Javascript to display opening times -->
+    <script language="JavaScript" type="text/javascript" src="js/openingtimes.js"></script>
 
+	<!-- J Query Javascript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <!-- Google maps API -->
+ 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+ 	<script type="text/javascript" src="js/maps.js"></script>
+    
+    
+     <!-- JSON Ajax -->
+    <script language="JavaScript" type="text/javascript" src="js/maroc.js"></script>
+    
+     <!-- Fancybox JavaScript-->
+    <script language="JavaScript" type="text/javascript" src="js/jquery.fancybox.js"></script>
 
 </body>
 

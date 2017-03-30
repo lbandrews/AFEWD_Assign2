@@ -22,8 +22,7 @@
     <!-- Font-awesome ICONS CSS -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     
-    <!-- Owl carousel css -->
-	<link rel="stylesheet" type="text/css" href="css/owl.css">
+
 	
     
   <!-- Browser icons to display logo on tabs and bookmarks -->
@@ -47,7 +46,11 @@
 
 <!-- Aladin Font for Navbar Brand -->
 <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
-
+<style>
+ #map {
+        height: 100%;
+      }
+</style>
 
 </head>
 
@@ -168,11 +171,17 @@
         </div>
 </section>
 
-<section id="homemap" class="map">
-<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2365.230595107726!2d-1.7866126837986334!3d53.64286038004227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bdc73fbf1f277%3A0xba20be0760f0a06!2sBar+Maroc!5e0!3m2!1sen!2sus!4v1479569129416"   ></iframe>
-<small>
-<a href="https://www.google.com/maps/place/Bar+Maroc/@53.6428604,-1.7866127,17z/data=!3m1!4b1!4m5!3m4!1s0x487bdc73fbf1f277:0xba20be0760f0a06!8m2!3d53.6428604!4d-1.784424?hl=en-US"></a>
-</small>
+<section id="mapdiv" class="map">
+<div id="map">
+</div>
+<br>
+<div id="journey" class="col-lg-10 col-lg-offset-1 text-center" style="font-size:16px" style="font-style:italic" style="font-weight:bold">
+<b>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+</b>
+<hr>
+</div>
+
 </section>
 
         <!-- Footer -->
@@ -203,7 +212,7 @@
                  <h4 class="aladin text-primary text-muted">Are we open right now? <div class="hours openstatus"><span class="blink"></span><span class="text-primary">Open</span></div>
 				 <div class="closed openstatus"><span class="blink-closed"></span><span class="text-secondary">Closed</span></div></h4>
                  
-                 <p class="text-muted">Monday-Sunday</p>
+                 <p class="text-muted">Monday-Saturday</p>
                  <h4 class="aladin text-secondary">16:30-Midnight</h4>
                 
                  
@@ -224,14 +233,19 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-    <!-- Custom Javascript to display time dependant content -->
-<script src="js/maroc.js"></script>
+    <!-- Javascript to display opening times -->
+    <script language="JavaScript" type="text/javascript" src="js/openingtimes.js"></script>
+
 	<!-- J Query Javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-    <!-- Owl carousel js -->
-    <script src="js/owl.carousel.min.js"></script>
+    
+    <!-- Google maps API -->
+ 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+ 	<script type="text/javascript" src="js/maps.js"></script>
+    
+    
 
+    
 </body>
 
 </html>
